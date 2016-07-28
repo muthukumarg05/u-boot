@@ -12,6 +12,11 @@ obj-$(CONFIG_CMD_BOOTM) += bootm.o
 obj-y += help.o
 obj-y += version.o
 
+# my command start
+obj-y += clear.o
+obj-y += printquotes.o
+# my command end
+
 # command
 obj-$(CONFIG_CMD_AES) += aes.o
 obj-$(CONFIG_CMD_AMBAPP) += ambapp.o
