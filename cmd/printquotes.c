@@ -1,4 +1,11 @@
-/* printquotes version2 */
+/*
+ * Copyright 2016
+ * Muthukumar, Zilogic Systems Embedded Developer, muthukumar@zilogic.com
+ */
+
+/*
+ * printquotes command
+ */
 
 #include <common.h>
 #include <command.h>
@@ -37,12 +44,12 @@ int do_printquotes(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
 }
 
 U_BOOT_CMD(
-	printquotes,                           /* name              */
-	2,                                     /* maxargs           */
-	0,                                     /* repereatble       */
-	do_printquotes,                        /* command           */
-	"prints predefined quotes in console \n",                 /* usage             */
-	"[# of quotes]\n -printquotes [1 | 2 | 3 | 4]\n"        /* help              */
+	printquotes,                                    /* name        */
+	2,                                              /* maxargs     */
+	0,                                              /* repereatble */
+	do_printquotes,                                 /* command     */
+	"prints predefined quotes in console \n",       /* usage       */
+	"[# of quotes] - printquotes [1 | 2 | 3 | 4]\n" /* help        */
 	);
 
 
