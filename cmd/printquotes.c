@@ -17,8 +17,8 @@
 
 int do_printquotes(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
 {
-	if (argc == 2 ) {
-		switch(*argv[1]) {
+    if ((argc == 2) && (argv[1][1] == '\0')) {
+	    switch(argv[1][0]) {
 		case '1':
 			puts(Q1);
 			break;
@@ -32,13 +32,13 @@ int do_printquotes(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
 			puts(Q4);
 			break;		
 		default:
-			puts("Try 'help printquote'\n");
+			puts("Try 'help printquotes'\n");
 			break;
 		}
 	} else if (argc == 1)
 		puts( Q1 Q2 Q3 Q4 );
 	else
-		puts("Try 'help printquote'\n");
+		puts("Try 'help printquotes'\n");
 
 	return 0;	
 }
